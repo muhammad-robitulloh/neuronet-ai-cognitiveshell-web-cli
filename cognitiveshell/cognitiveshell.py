@@ -6,6 +6,10 @@ import subprocess
 import atexit
 import os
 
+# Add the project root to the Python path
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, project_root)
+
 from telegram import Update
 from telegram.constants import ChatAction, ParseMode
 from telegram.ext import (
@@ -40,7 +44,7 @@ logger = logging.getLogger(__name__)
 def start_frontend_dev_server():
     """Starts the npm start process in the frontend directory."""
     global frontend_process
-    frontend_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ai_web_dashboard', 'frontend')
+    frontend_dir = os.path.join(project_root, 'ai_web_dashboard', 'frontend')
     
     if not os.path.isdir(frontend_dir):
         logger.error(f"[Frontend] Directory not found: {frontend_dir}")
@@ -65,11 +69,20 @@ def start_frontend_dev_server():
 def stop_frontend_dev_server():
     """Stops the npm start process if it's running."""
     global frontend_process
-    if frontend_process:
+    if frontend_process and frontend_process.poll() is None:
         logger.info(f"[Frontend] Stopping 'npm start' process (PID: {frontend_process.pid})...")
-        frontend_process.terminate()
-        frontend_process.wait()
-        logger.info("[Frontend] 'npm start' process stopped.")
+        try:
+            # Send SIGTERM for graceful shutdown
+            frontend_process.terminate()
+            frontend_process.wait(timeout=10)
+            logger.info("[Frontend] 'npm start' process stopped.")
+        except subprocess.TimeoutExpired:
+            logger.warning("[Frontend] 'npm start' process did not terminate gracefully. Forcing kill.")
+            frontend_process.kill()
+            frontend_process.wait()
+            logger.info("[Frontend] 'npm start' process killed.")
+        except Exception as e:
+            logger.error(f"Error stopping frontend process: {e}")
 
 # Register the cleanup function to be called on script exit
 atexit.register(stop_frontend_dev_server)
@@ -378,50 +391,54 @@ def main():
     parser.add_argument("--web-dashboard", action="store_true", help="Start the web dashboard backend instead of the Telegram bot.")
     args = parser.parse_args()
 
-    if args.web_dashboard:
-        logger.info("Starting AI Web Dashboard Backend...")
-        # Ensure the current working directory is added to sys.path for uvicorn to find the app
-        sys.path.insert(0, ai_core.os.path.dirname(ai_core.os.path.abspath(__file__)) + '/ai_web_dashboard/backend')
-        uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True, reload_dirs=["ai_web_dashboard/backend"])
-    else:
-        logger.info(f"Starting Telegram Bot...")
-        if not ai_core.get_telegram_bot_token():
-            logger.error(f"ERROR: TELEGRAM_BOT_TOKEN is not set. Please set the environment variable or enter it directly.")
-            return
-        if not ai_core.get_telegram_chat_id():
-            logger.error(f"ERROR: TELEGRAM_CHAT_ID is not set. Please set the environment variable or enter it directly.")
-            return
-        if not ai_core.get_openrouter_api_key():
-            logger.error(f"ERROR: OPENROUTER_API_KEY is not set. Please set the environment variable or enter it directly.")
-            return
+    try:
+        if args.web_dashboard:
+            logger.info("Starting AI Web Dashboard Backend...")
+            # Ensure the current working directory is added to sys.path for uvicorn to find the app
+            sys.path.insert(0, os.path.join(project_root, 'ai_web_dashboard', 'backend'))
+            uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True, reload_dirs=[os.path.join(project_root, 'ai_web_dashboard', 'backend')])
+        else:
+            logger.info(f"Starting Telegram Bot...")
+            if not ai_core.get_telegram_bot_token():
+                logger.error(f"ERROR: TELEGRAM_BOT_TOKEN is not set. Please set the environment variable or enter it directly.")
+                return
+            if not ai_core.get_telegram_chat_id():
+                logger.error(f"ERROR: TELEGRAM_CHAT_ID is not set. Please set the environment variable or enter it directly.")
+                return
+            if not ai_core.get_openrouter_api_key():
+                logger.error(f"ERROR: OPENROUTER_API_KEY is not set. Please set the environment variable or enter it directly.")
+                return
 
-        logger.info(f"Using TOKEN: {'*' * (len(ai_core.get_telegram_bot_token()) - 5) + ai_core.get_telegram_bot_token()[-5:] if len(ai_core.get_telegram_bot_token()) > 5 else ai_core.get_telegram_bot_token()}")
-        logger.info(f"Allowed Chat ID: {ai_core.get_telegram_chat_id()}")
+            logger.info(f"Using TOKEN: {'*' * (len(ai_core.get_telegram_bot_token()) - 5) + ai_core.get_telegram_bot_token()[-5:] if len(ai_core.get_telegram_bot_token()) > 5 else ai_core.get_telegram_bot_token()}")
+            logger.info(f"Allowed Chat ID: {ai_core.get_telegram_chat_id()}")
 
-        application = Application.builder().token(ai_core.get_telegram_bot_token()).job_queue(JobQueue()).build()
+            application = Application.builder().token(ai_core.get_telegram_bot_token()).job_queue(JobQueue()).build()
 
-        application.add_handler(CommandHandler("start", start_command))
-        application.add_handler(CommandHandler("listfiles", handle_listfiles_command))
-        application.add_handler(CommandHandler("deletefile", handle_deletefile_command))
-        application.add_handler(CommandHandler("clear_chat", handle_clear_chat_command))
-        
-        conv_handler = ConversationHandler(
-            entry_points=[MessageHandler(filters.TEXT & ~filters.COMMAND, ask_for_debug_response)],
-            states={
-                DEBUGGING_STATE: [MessageHandler(filters.TEXT & ~filters.COMMAND, ask_for_debug_response)],
-            },
-            fallbacks=[CommandHandler('cancel', lambda update, context: ConversationHandler.END)]
-        )
-        application.add_handler(conv_handler)
-        
-        application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text_message))
-        application.add_handler(MessageHandler(filters.COMMAND, handle_unknown_command))
+            application.add_handler(CommandHandler("start", start_command))
+            application.add_handler(CommandHandler("listfiles", handle_listfiles_command))
+            application.add_handler(CommandHandler("deletefile", handle_deletefile_command))
+            application.add_handler(CommandHandler("clear_chat", handle_clear_chat_command))
+            
+            conv_handler = ConversationHandler(
+                entry_points=[MessageHandler(filters.TEXT & ~filters.COMMAND, ask_for_debug_response)],
+                states={
+                    DEBUGGING_STATE: [MessageHandler(filters.TEXT & ~filters.COMMAND, ask_for_debug_response)],
+                },
+                fallbacks=[CommandHandler('cancel', lambda update, context: ConversationHandler.END)]
+            )
+            application.add_handler(conv_handler)
+            
+            application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text_message))
+            application.add_handler(MessageHandler(filters.COMMAND, handle_unknown_command))
 
-        logger.info(f"Bot is running. Press Ctrl+C to stop.")
-        try:
+            logger.info(f"Bot is running. Press Ctrl+C to stop.")
             application.run_polling(allowed_updates=Update.ALL_TYPES)
-        finally:
-            logger.info(f"Bot stopped.")
+
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
+    finally:
+        stop_frontend_dev_server()
+        logger.info("Application shut down.")
 
 if __name__ == "__main__":
     main()

@@ -20,6 +20,8 @@ classifiers = [
     "Topic :: Terminals",
 ]
 dependencies = [
+    "fastapi~=0.103.2",
+    "pydantic<2",
     "uvicorn",
     "python-telegram-bot",
     "fastapi",

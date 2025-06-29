@@ -1,12 +1,13 @@
-import pexpect
 import requests
 import re
 import os
-import time
 import subprocess
 import logging
 import shlex
 from dotenv import load_dotenv
+from .env_utils import _update_env_file
+import platform
+import asyncio
 
 # Load environment variables from .env file
 load_dotenv()
@@ -41,12 +42,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# --- Global Variables for System Information ---
-SYSTEM_INFO = {
-    "os": "Unknown",
-    "shell": "Unknown",
-    "neofetch_output": "Not available"
-}
+
 
 # --- Global Functions for Context Storage ---
 user_contexts: dict = {}
@@ -295,11 +291,10 @@ def minta_kode(prompt: str, error_context: str = None, chat_id: int = None, targ
     for msg in recent_history:
         messages.append(msg)
 
-    # Add system information to the system message
+    system_info = get_system_info()
     system_info_message = (
         f"You are an AI coding assistant proficient in various programming languages. "
-        f"The system runs on OS: {SYSTEM_INFO['os']}, Shell: {SYSTEM_INFO['shell']}. "
-        f"Neofetch output: \n```\n{SYSTEM_INFO['neofetch_output']}\n```\n"
+        f"The system runs on OS: {system_info['os']}, Shell: {system_info['shell']}. "
         f"Code results *must* be Markdown code blocks with appropriate language tags "
         f"(e.g., ```python, ```bash, ```javascript, ```html, ```css, ```php, ```java, etc.). "
         f"DO NOT add explanations, intros, conclusions, or extra text outside the Markdown code block. "
@@ -390,10 +385,10 @@ def konversi_ke_perintah_shell(bahasa_natural: str, chat_id: int = None) -> tupl
     for msg in recent_history:
         messages.append(msg)
 
-    # Add system information to the system message
+    system_info = get_system_info()
     system_message_content = (
         f"You are a natural language to shell command translator. "
-        f"The system runs on OS: {SYSTEM_INFO['os']}, Shell: {SYSTEM_INFO['shell']}. "
+        f"The system runs on OS: {system_info['os']}, Shell: {system_info['shell']}. "
         f"Convert the following natural language instruction into the most relevant single-line Linux Termux shell command. "
         f"Do not provide explanations, just the command. "
         f"If the instruction is unclear or cannot be converted into a shell command, respond with 'CANNOT_CONVERT'."
@@ -418,10 +413,10 @@ def kirim_error_ke_llm_for_suggestion(log_error: str, chat_id: int = None) -> tu
     for msg in recent_history:
         messages.append(msg)
 
-    # Add system information to the system message
+    system_info = get_system_info()
     system_message_content = (
         f"You are an AI debugger. "
-        f"The system runs on OS: {SYSTEM_INFO['os']}, Shell: {SYSTEM_INFO['shell']}. "
+        f"The system runs on OS: {system_info['os']}, Shell: {system_info['shell']}. "
         f"Consider this system information when analyzing errors and providing suggestions. "
         f"Provide suggestions in a runnable shell format if possible, or in a Markdown code block. "
         f"Otherwise, provide a brief explanation."
@@ -446,9 +441,10 @@ def minta_jawaban_konversasi(chat_id: int, prompt: str) -> tuple[bool, str]:
     
     system_context_messages = []
 
+    system_info = get_system_info()
     # Add system information to the beginning of the system message
     system_context_messages.append(
-        {"role": "system", "content": f"System runs on OS: {SYSTEM_INFO['os']}, Shell: {SYSTEM_INFO['shell']}. Neofetch information:\n```\n{SYSTEM_INFO['neofetch_output']}\n```"}
+        {"role": "system", "content": f"System runs on OS: {system_info['os']}, Shell: {system_info['shell']}."}
     )
 
     if user_context["last_command_run"] and user_context["last_ai_response_type"] == "shell":
@@ -543,144 +539,95 @@ def deteksi_perintah_shell(saran_ai: str) -> str | None:
                 
     return None
 
-# === Security Function: Filter Dangerous Commands ===
-def is_command_dangerous(command: str) -> bool:
+# === Security Function: Whitelist Safe Commands ===
+def is_command_safe(command: str) -> bool:
     """
-    Checks if a shell command contains forbidden keywords.
+    Checks if a shell command is in the whitelist of safe commands.
+    This is a more secure approach than blacklisting.
     """
-    command_lower = command.lower()
-    
-    dangerous_patterns = [
-        r'\brm\b\s+-rf',
-        r'\brm\b\s+/\s*',
-        r'\bpkg\s+uninstall\b',
-        r'\bmv\b\s+/\s*',
-        r'\bchown\b\s+root',
-        r'\bchmod\b\s+\d{3}\s+/\s*',
-        r'\bsu\b',
-        r'\bsudo\b\s+poweroff',
-        r'\breboot\b',
-        r'\bformat\b',
-        r'\bmkfs\b',
-        r'\bdd\b',
-        r'\bfdisk\b',
-        r'\bparted\b',
-        r'\bwipefs\b',
-        r'\bcrontab\b\s+-r',
+    # Split command into command and arguments
+    try:
+        command_parts = shlex.split(command)
+        if not command_parts:
+            return False
+        main_command = command_parts[0]
+    except ValueError:
+        # Handle cases where shlex can't split the command
+        main_command = command.split()[0]
+
+    # Whitelist of safe commands
+    safe_commands = [
+        "ls", "cd", "pwd", "echo", "cat", "grep", "find", "touch", "mkdir", "mv", "cp",
+        "rm", "rmdir", "chmod", "chown", "git", "pip", "python", "node", "npm", "npx",
+        "bash", "sh", "unzip", "tar", "wget", "curl", "nano", "vim", "pico",
+        "ps", "kill", "df", "du", "free", "top", "htop", "uptime", "ifconfig", "ip",
+        "netstat", "ping", "ssh", "scp", "whoami", "uname", "history", "clear", "which",
+        "apt", "pkg", "yum", "dnf", "pacman" # Package managers
     ]
 
-    for pattern in dangerous_patterns:
-        if re.search(pattern, command_lower):
-            logger.warning(f"[SECURITY] ❗ Dangerous command detected: {command}")
-            return True
+    if main_command in safe_commands:
+        # Additional checks for potentially risky commands like 'rm'
+        if main_command == "rm" and ("-rf" in command_parts or "-r" in command_parts):
+             # Be extra careful with recursive remove
+             # For now, we allow it but this could be a point of further restriction
+             pass
+        if main_command in ["apt", "pkg", "yum", "dnf", "pacman"] and "install" not in command_parts:
+            # Only allow install commands for package managers for now
+            # to prevent accidental uninstalls or system modifications.
+            # This can be expanded later if needed.
+            if "update" not in command_parts and "upgrade" not in command_parts:
+                logger.warning(f"[SECURITY] ❗ Potentially unsafe package manager command: {command}")
+                return False
+
+        logger.info(f"[SECURITY] ✅ Command is in the safe list: {command}")
+        return True
+    
+    logger.warning(f"[SECURITY] ❗ Command not in whitelist, blocked: {command}")
     return False
 
-# === Function to check system info with neofetch ===
-def check_system_info():
+
+import platform
+import asyncio
+
+# --- System Information Function ---
+def get_system_info():
     """
-    Checks for neofetch availability and retrieves system information.
-    If neofetch is not available, it attempts to install it based on the OS.
+    Retrieves basic system information using Python's built-in libraries.
     """
-    global SYSTEM_INFO
-
-    def install_neofetch(install_command):
-        """Attempts to install neofetch using the given command."""
-        logger.info(f"{COLOR_YELLOW}[INFO SISTEM] Neofetch tidak ditemukan. Mencoba menginstal dengan: '{' '.join(install_command)}'...{COLOR_RESET}")
-        try:
-            # Try to install silently
-            subprocess.run(install_command, check=True, capture_output=True)
-            logger.info(f"{COLOR_GREEN}[INFO SISTEM] Neofetch berhasil diinstal.{COLOR_RESET}")
-            return True
-        except subprocess.CalledProcessError as e:
-            logger.error(f"{COLOR_RED}🔴 ERROR: Gagal menginstal neofetch. Output error:\n{e.stderr.strip()}{COLOR_RESET}")
-            return False
-        except FileNotFoundError:
-            logger.error(f"{COLOR_RED}🔴 ERROR: Perintah instalasi '{install_command[0]}' tidak ditemukan.{COLOR_RESET}")
-            return False
-
-    # First, try to detect the OS
-    detected_os = "Unknown"
     try:
-        if os.path.exists("/data/data/com.termux/files/usr/bin/pkg"):
-            detected_os = "Termux"
-        elif os.path.exists("/etc/os-release"):
-            with open("/etc/os-release", "r") as f:
-                os_release_content = f.read()
-                if "ID=debian" in os_release_content or "ID=ubuntu" in os_release_content:
-                    detected_os = "Debian/Ubuntu"
-                elif "ID_LIKE=arch" in os_release_content:
-                    detected_os = "Arch Linux"
-                elif "ID=fedora" in os_release_content:
-                    detected_os = "Fedora"
-                # Add more OS detection as needed
-    except Exception as e:
-        logger.warning(f"[INFO SISTEM] Gagal mendeteksi OS secara detail: {e}. Menggunakan deteksi default.")
-    
-    SYSTEM_INFO["os"] = detected_os
-    logger.info(f"[INFO SISTEM] OS yang terdeteksi: {SYSTEM_INFO['os']}")
-
-    # Check if neofetch is installed
-    try:
-        subprocess.run(["which", "neofetch"], check=True, capture_output=True)
-        neofetch_installed = True
-    except (subprocess.CalledProcessError, FileNotFoundError):
-        neofetch_installed = False
-
-    if not neofetch_installed:
-        if detected_os == "Termux":
-            success_install = install_neofetch(["pkg", "install", "-y", "neofetch"])
-        elif detected_os == "Debian/Ubuntu":
-            success_install = install_neofetch(["sudo", "apt", "install", "-y", "neofetch"])
-            if not success_install: # Fallback if sudo isn't configured for current user
-                 success_install = install_neofetch(["apt", "install", "-y", "neofetch"])
-        elif detected_os == "Arch Linux":
-            success_install = install_neofetch(["sudo", "pacman", "-S", "--noconfirm", "neofetch"])
-        elif detected_os == "Fedora":
-            success_install = install_neofetch(["sudo", "dnf", "install", "-y", "neofetch"])
+        system = platform.system()
+        if system == "Linux":
+            # On Termux, platform.release() gives a generic kernel version.
+            # We can check for Termux-specific environment variables.
+            if os.environ.get("TERMUX_VERSION"):
+                os_name = "Termux"
+            else:
+                # For other Linux, try to read /etc/os-release
+                try:
+                    with open("/etc/os-release") as f:
+                        lines = f.readlines()
+                        info = dict(line.strip().split('=', 1) for line in lines if '=' in line)
+                        os_name = info.get('PRETTY_NAME', 'Linux').strip('"')
+                except FileNotFoundError:
+                    os_name = f"Linux ({platform.release()})"
         else:
-            logger.warning(f"{COLOR_YELLOW}[INFO SISTEM] Neofetch tidak ditemukan dan OS tidak dikenal untuk instalasi otomatis. Coba instal neofetch secara manual.{COLOR_RESET}")
-            success_install = False
+            os_name = f"{system} ({platform.release()})"
+
+        shell = os.environ.get("SHELL", "Unknown")
         
-        if not success_install:
-            logger.error(f"{COLOR_RED}🔴 ERROR: Neofetch tidak terinstal dan gagal menginstalnya secara otomatis. Tidak dapat melanjutkan tanpa neofetch.{COLOR_RESET}")
-            exit(1) # Exit if installation fails
-
-    try:
-        # Run neofetch and capture its output
-        result = subprocess.run(["neofetch", "--off", "--config", "none", "--stdout"], capture_output=True, text=True, check=True)
-        neofetch_output = result.stdout.strip()
-        SYSTEM_INFO["neofetch_output"] = neofetch_output
-        logger.info(f"{COLOR_GREEN}[INFO SISTEM] Neofetch successfully executed.{COLOR_RESET}")
-
-        # Parse neofetch output to get OS and Shell
-        os_match = re.search(r"OS:\s*(.*?)\n", neofetch_output)
-        shell_match = re.search(r"Shell:\s*(.*?)\n", neofetch_output)
-
-        if os_match:
-            SYSTEM_INFO["os"] = os_match.group(1).strip()
-        if shell_match:
-            SYSTEM_INFO["shell"] = shell_match.group(1).strip()
-        
-        logger.info(f"[INFO SISTEM] Detected OS: {SYSTEM_INFO['os']}")
-        logger.info(f"[INFO SISTEM] Detected Shell: {SYSTEM_INFO['shell']}")
-
-    except subprocess.CalledProcessError as e:
-        logger.error(f"{COLOR_RED}🔴 ERROR: Failed to run neofetch even after installation attempt. Error output:\n{e.stderr.strip()}{COLOR_RESET}")
-        logger.error(f"{COLOR_RED}Please check neofetch installation and your PATH manually.{COLOR_RESET}")
-        logger.error(f"{COLOR_RED}Program will stop. Please fix neofetch installation to continue.{COLOR_RESET}")
-        exit(1)
-    except FileNotFoundError:
-        # This case should ideally not happen if install_neofetch worked
-        logger.error(f"{COLOR_RED}🔴 ERROR: 'neofetch' command not found after installation attempt.{COLOR_RESET}")
-        logger.error(f"{COLOR_RED}Program will stop. Please fix neofetch installation to continue.{COLOR_RESET}")
-        exit(1)
+        info = {
+            "os": os_name,
+            "shell": shell,
+        }
+        logger.info(f"System Info Detected: {info}")
+        return info
     except Exception as e:
-        logger.error(f"{COLOR_RED}🔴 ERROR: An unexpected error occurred while checking system information: {e}{COLOR_RESET}")
-        logger.error(f"{COLOR_RED}Program will stop.{COLOR_RESET}")
-        exit(1)
+        logger.error(f"Failed to get system info: {e}")
+        return {
+            "os": "Unknown",
+            "shell": "Unknown",
+        }
 
-# Call check_system_info once when this module is imported
-check_system_info()
 
 # === Shell Execution Function (for web backend) ===
 async def execute_shell_command(command_to_run: str, chat_id: int = 0):
@@ -841,26 +788,7 @@ def update_llm_config(new_config: dict):
     FILENAME_GEN_MODEL = new_config.get("FILENAME_GEN_MODEL", FILENAME_GEN_MODEL)
     INTENT_DETECTION_MODEL = new_config.get("INTENT_DETECTION_MODEL", INTENT_DETECTION_MODEL)
 
-    # Update .env file (simplified for demonstration, consider a more robust solution for production)
-    env_path = os.path.join(os.getcwd(), '.env')
-    env_vars = {}
-    if os.path.exists(env_path):
-        with open(env_path, 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith('#'):
-                    key, value = line.split('=', 1)
-                    env_vars[key] = value
-    
-    for key, value in new_config.items():
-        env_vars[key] = value
-
-    with open(env_path, 'w') as f:
-        for key, value in env_vars.items():
-            f.write(f"{key}={value}\n")
-    
-    load_dotenv(override=True) # Reload environment variables to ensure consistency
-    return True, "Configuration updated successfully."
+    return _update_env_file(new_config)
 
 
 # Expose SYSTEM_INFO
@@ -893,8 +821,8 @@ async def process_user_message(chat_id: int, user_message: str):
         elif perintah_shell == "CANNOT_CONVERT":
             return {"type": "info", "message": "UNCLEAR COMMAND: Sorry, I cannot convert that instruction into a clear shell command. Please provide more specific instructions."}
 
-        if is_command_dangerous(perintah_shell):
-            return {"type": "error", "message": f"PROHIBITED: This command is not allowed to be executed: `{perintah_shell}`. Please use another command."}
+        if not is_command_safe(perintah_shell):
+            return {"type": "error", "message": f"PROHIBITED: This command is not in the list of allowed commands: `{perintah_shell}`. Please use another command."}
         
         user_context["last_ai_response_type"] = "shell"
         user_context["last_command_run"] = perintah_shell
@@ -1054,26 +982,7 @@ def set_llm_models(new_models: dict):
     FILENAME_GEN_MODEL = new_models.get("FILENAME_GEN_MODEL", FILENAME_GEN_MODEL)
     INTENT_DETECTION_MODEL = new_models.get("INTENT_DETECTION_MODEL", INTENT_DETECTION_MODEL)
 
-    # Update .env file
-    env_path = os.path.join(os.getcwd(), '.env')
-    env_vars = {}
-    if os.path.exists(env_path):
-        with open(env_path, 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith('#'):
-                    key, value = line.split('=', 1)
-                    env_vars[key] = value
-    
-    for key, value in new_models.items():
-        env_vars[key] = value
-
-    with open(env_path, 'w') as f:
-        for key, value in env_vars.items():
-            f.write(f"{key}={value}\n")
-    
-    load_dotenv(override=True) # Reload environment variables
-    return True, "LLM models updated successfully."
+    return _update_env_file(new_models)
 
 
 # Function to get and set OPENROUTER_API_KEY
@@ -1083,26 +992,7 @@ def get_openrouter_api_key():
 def set_openrouter_api_key(api_key: str):
     global OPENROUTER_API_KEY
     OPENROUTER_API_KEY = api_key
-    
-    # Update .env file
-    env_path = os.path.join(os.getcwd(), '.env')
-    env_vars = {}
-    if os.path.exists(env_path):
-        with open(env_path, 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith('#'):
-                    key, value = line.split('=', 1)
-                    env_vars[key] = value
-    
-    env_vars["OPENROUTER_API_KEY"] = api_key
-
-    with open(env_path, 'w') as f:
-        for key, value in env_vars.items():
-            f.write(f"{key}={value}\n")
-    
-    load_dotenv(override=True) # Reload environment variables
-    return True, "OpenRouter API Key updated successfully."
+    return _update_env_file({"OPENROUTER_API_KEY": api_key})
 
 
 # Function to get and set LLM_BASE_URL
@@ -1112,26 +1002,7 @@ def get_llm_base_url():
 def set_llm_base_url(base_url: str):
     global LLM_BASE_URL
     LLM_BASE_URL = base_url
-    
-    # Update .env file
-    env_path = os.path.join(os.getcwd(), '.env')
-    env_vars = {}
-    if os.path.exists(env_path):
-        with open(env_path, 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith('#'):
-                    key, value = line.split('=', 1)
-                    env_vars[key] = value
-    
-    env_vars["LLM_BASE_URL"] = base_url
-
-    with open(env_path, 'w') as f:
-        for key, value in env_vars.items():
-            f.write(f"{key}={value}\n")
-    
-    load_dotenv(override=True) # Reload environment variables
-    return True, "LLM Base URL updated successfully."
+    return _update_env_file({"LLM_BASE_URL": base_url})
 
 
 # Function to get and set TELEGRAM_CHAT_ID (for reference, not directly used by web)
@@ -1141,26 +1012,7 @@ def get_telegram_chat_id():
 def set_telegram_chat_id(chat_id: str):
     global TELEGRAM_CHAT_ID
     TELEGRAM_CHAT_ID = chat_id
-    
-    # Update .env file
-    env_path = os.path.join(os.getcwd(), '.env')
-    env_vars = {}
-    if os.path.exists(env_path):
-        with open(env_path, 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith('#'):
-                    key, value = line.split('=', 1)
-                    env_vars[key] = value
-    
-    env_vars["TELEGRAM_CHAT_ID"] = chat_id
-
-    with open(env_path, 'w') as f:
-        for key, value in env_vars.items():
-            f.write(f"{key}={value}\n")
-    
-    load_dotenv(override=True) # Reload environment variables
-    return True, "Telegram Chat ID updated successfully."
+    return _update_env_file({"TELEGRAM_CHAT_ID": chat_id})
 
 
 # Function to get and set TELEGRAM_BOT_TOKEN (for reference, not directly used by web)
@@ -1170,25 +1022,6 @@ def get_telegram_bot_token():
 def set_telegram_bot_token(token: str):
     global TELEGRAM_BOT_TOKEN
     TELEGRAM_BOT_TOKEN = token
-    
-    # Update .env file
-    env_path = os.path.join(os.getcwd(), '.env')
-    env_vars = {}
-    if os.path.exists(env_path):
-        with open(env_path, 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith('#'):
-                    key, value = line.split('=', 1)
-                    env_vars[key] = value
-    
-    env_vars["TELEGRAM_BOT_TOKEN"] = token
-
-    with open(env_path, 'w') as f:
-        for key, value in env_vars.items():
-            f.write(f"{key}={value}\n")
-    
-    load_dotenv(override=True) # Reload environment variables
-    return True, "Telegram Bot Token updated successfully."
+    return _update_env_file({"TELEGRAM_BOT_TOKEN": token})
 
 
