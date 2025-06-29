@@ -1,0 +1,23 @@
+# Virtual Filesystems & OS
+/ubuntu22-fs/
+/ubuntu22-binds/
+
+# Python
+__pycache__/
+*.pyc
+.env
+/ai-venv/
+/my-env/
+/venv/
+
+# Node
+/node_modules/
+
+# Build artifacts
+/dist/
+/build/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/

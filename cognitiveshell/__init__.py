@@ -1,0 +1,1 @@
+# This file makes 'cognitiveshell' a Python package.
