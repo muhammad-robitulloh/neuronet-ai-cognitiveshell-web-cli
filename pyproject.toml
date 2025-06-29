@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuronet-ai-cognitiveshell"
+version = "0.1.0"
+authors = [
+  { name="muhammad-robitulloh", email="muhammadrobitulloh19@gmail.com" },
+]
+description = "An AI-powered assistant for shell commands and code generation, accessible via Telegram and a web dashboard."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Terminals",
+]
+dependencies = [
+    "uvicorn",
+    "python-telegram-bot",
+    "fastapi",
+    "requests",
+    "python-dotenv",
+    "openai",
+    "beautifulsoup4",
+    "google-generativeai"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/muhammad-robitulloh/neuronet-ai-cognitiveshell-web-cli"
+"Bug Tracker" = "https://github.com/muhammad-robitulloh/neuronet-ai-cognitiveshell-web-cli/issues"
+
+[project.scripts]
+neuronet-ai = "AI_shell_final_v4_5:main"
