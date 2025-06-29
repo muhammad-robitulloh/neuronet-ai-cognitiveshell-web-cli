@@ -2,6 +2,9 @@ import logging
 import sys
 import argparse
 import uvicorn
+import subprocess
+import atexit
+import os
 
 from telegram import Update
 from telegram.constants import ChatAction, ParseMode
@@ -18,6 +21,9 @@ from telegram.ext import (
 # Import the refactored AI core logic
 from ai_web_dashboard.backend import ai_core
 
+# --- Global variable for the frontend process ---
+frontend_process = None
+
 # State for ConversationHandler (debugging)
 DEBUGGING_STATE = 1
 
@@ -28,6 +34,46 @@ logging.basicConfig(
     datefmt='%H:%M:%S'
 )
 logger = logging.getLogger(__name__)
+
+# === Frontend Process Management ===
+
+def start_frontend_dev_server():
+    """Starts the npm start process in the frontend directory."""
+    global frontend_process
+    frontend_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ai_web_dashboard', 'frontend')
+    
+    if not os.path.isdir(frontend_dir):
+        logger.error(f"[Frontend] Directory not found: {frontend_dir}")
+        return
+
+    logger.info(f"[Frontend] Starting 'npm start' in {frontend_dir}...")
+    try:
+        # Using Popen to run it as a non-blocking background process
+        frontend_process = subprocess.Popen(
+            ['npm', 'start'],
+            cwd=frontend_dir,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        logger.info(f"[Frontend] 'npm start' process started with PID: {frontend_process.pid}")
+    except FileNotFoundError:
+        logger.error("[Frontend] 'npm' command not found. Please ensure Node.js and npm are installed and in your PATH.")
+    except Exception as e:
+        logger.error(f"[Frontend] Failed to start 'npm start': {e}")
+
+def stop_frontend_dev_server():
+    """Stops the npm start process if it's running."""
+    global frontend_process
+    if frontend_process:
+        logger.info(f"[Frontend] Stopping 'npm start' process (PID: {frontend_process.pid})...")
+        frontend_process.terminate()
+        frontend_process.wait()
+        logger.info("[Frontend] 'npm start' process stopped.")
+
+# Register the cleanup function to be called on script exit
+atexit.register(stop_frontend_dev_server)
+
 
 # === Telegram Command Handlers ===
 
@@ -325,6 +371,9 @@ async def run_shell_observer_telegram(command_to_run: str, update: Update, conte
 
 def main():
     """Main function to start the Telegram bot or web dashboard."""
+    # Start the frontend dev server regardless of the mode
+    start_frontend_dev_server()
+
     parser = argparse.ArgumentParser(description="AI Shell & Code Assistant Bot/Web Dashboard")
     parser.add_argument("--web-dashboard", action="store_true", help="Start the web dashboard backend instead of the Telegram bot.")
     args = parser.parse_args()
@@ -369,8 +418,10 @@ def main():
         application.add_handler(MessageHandler(filters.COMMAND, handle_unknown_command))
 
         logger.info(f"Bot is running. Press Ctrl+C to stop.")
-        application.run_polling(allowed_updates=Update.ALL_TYPES)
-        logger.info(f"Bot stopped.")
+        try:
+            application.run_polling(allowed_updates=Update.ALL_TYPES)
+        finally:
+            logger.info(f"Bot stopped.")
 
 if __name__ == "__main__":
     main()
