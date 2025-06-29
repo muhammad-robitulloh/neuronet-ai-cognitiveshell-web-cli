@@ -36,3 +36,4 @@ dependencies = [
 
 [project.scripts]
 neuronet-ai = "cognitiveshell.cognitiveshell:main"
+quickstart = "cognitiveshell.quickstart:main"
