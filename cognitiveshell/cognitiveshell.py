@@ -220,7 +220,7 @@ async def handle_text_message(update: Update, context: CallbackContext):
         await kirim_ke_telegram(chat_id, context, f"*You can open it in Termux with:* `nano {response["filename"]}`")
         if response["run_suggestion"]:
             await kirim_ke_telegram(chat_id, context, f"*And run with:* {response["run_suggestion"]}")
-        await kirim_ke_telegram(chat_id, context, f"*📋 GENERATED CODE*\n```{"language"}\n{"code"}\n```")
+        await kirim_ke_telegram(chat_id, context, f'*📋 GENERATED CODE*\n```{response["language"]}\n{response["code"]}\n```')
     elif response["type"] == "conversation":
         await kirim_ke_telegram(chat_id, context, f"*💬 AI RESPONSE*\n{response["message"]}")
     elif response["type"] == "error":
@@ -251,9 +251,9 @@ async def ask_for_debug_response(update: Update, context: CallbackContext):
         if response["type"] == "debug_fix_generated":
             await kirim_ke_telegram(chat_id, context, f"*✅ SUCCESS* AI has generated a fix/new code to `{response["filename"]}`.")
             if response["run_suggestion"]:
-                await kirim_ke_telegram(chat_id, context, f"*Please review and try running again with:* {response["run_suggestion"]}\n\n*📋 FIX CODE*\n```{"language"}\n{"code"}\n```")
+                await kirim_ke_telegram(chat_id, context, f'*Please review and try running again with:* {response["run_suggestion"]}\n\n*📋 FIX CODE*\n```{response["language"]}\n{response["code"]}\n```')
             else:
-                await kirim_ke_telegram(chat_id, context, f"*Please review and try running again. *\n\n*📋 FIX CODE*\n```{"language"}\n{"code"}\n```")
+                await kirim_ke_telegram(chat_id, context, f'*Please review and try running again. *\n\n*📋 FIX CODE*\n```{response["language"]}\n{response["code"]}\n```')
         elif response["type"] == "error":
             await kirim_ke_telegram(chat_id, context, f"*🔴 DEBUGGING ERROR* {response["message"]}")
         elif response["type"] == "info":
@@ -358,8 +358,9 @@ async def run_shell_observer_telegram(command_to_run: str, update: Update, conte
             saran = output_line_raw[len("AI_SUGGESTION: "):].strip()
             saran_lang = ai_core.deteksi_bahasa_pemrograman_dari_konten(saran)
             telegram_msg = f"""*💡 AI SUGGESTION*
-```{"saran_lang"}
-{"saran"}
+```
+{saran_lang}
+{saran}
 ```
 """
             await kirim_ke_telegram(chat_id, context, telegram_msg)
@@ -419,6 +420,8 @@ def main():
             application.add_handler(CommandHandler("deletefile", handle_deletefile_command))
             application.add_handler(CommandHandler("clear_chat", handle_clear_chat_command))
             
+            application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text_message))
+
             conv_handler = ConversationHandler(
                 entry_points=[MessageHandler(filters.TEXT & ~filters.COMMAND, ask_for_debug_response)],
                 states={
@@ -428,7 +431,6 @@ def main():
             )
             application.add_handler(conv_handler)
             
-            application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text_message))
             application.add_handler(MessageHandler(filters.COMMAND, handle_unknown_command))
 
             logger.info(f"Bot is running. Press Ctrl+C to stop.")

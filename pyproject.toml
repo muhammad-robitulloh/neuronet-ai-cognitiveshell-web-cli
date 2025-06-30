@@ -24,12 +24,9 @@ dependencies = [
     "pydantic<2",
     "uvicorn",
     "python-telegram-bot",
-    "fastapi",
     "requests",
     "python-dotenv",
-    "openai",
-    "beautifulsoup4",
-    "google-generativeai"
+    "pexpect~=4.9.0"
 ]
 
 [project.urls]

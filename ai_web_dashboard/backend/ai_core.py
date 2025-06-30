@@ -4,10 +4,10 @@ import os
 import subprocess
 import logging
 import shlex
+import pexpect
 from dotenv import load_dotenv
 from .env_utils import _update_env_file
 import platform
-import asyncio
 
 # Load environment variables from .env file
 load_dotenv()
@@ -586,9 +586,6 @@ def is_command_safe(command: str) -> bool:
     return False
 
 
-import platform
-import asyncio
-
 # --- System Information Function ---
 def get_system_info():
     """
@@ -628,6 +625,8 @@ def get_system_info():
             "shell": "Unknown",
         }
 
+SYSTEM_INFO = get_system_info()
+
 
 # === Shell Execution Function (for web backend) ===
 async def execute_shell_command(command_to_run: str, chat_id: int = 0):
@@ -639,6 +638,10 @@ async def execute_shell_command(command_to_run: str, chat_id: int = 0):
     user_context["last_command_run"] = command_to_run
     user_context["full_error_output"] = []
     user_context["last_error_log"] = None
+
+    if not is_command_safe(command_to_run):
+        yield f"ERROR: Command '{command_to_run}' is not allowed."
+        return
 
     logger.info(f"\n{COLOR_BLUE}[Shell] 🟢 Running command: `{command_to_run}`{COLOR_RESET}\n")
 
@@ -791,9 +794,7 @@ def update_llm_config(new_config: dict):
     return _update_env_file(new_config)
 
 
-# Expose SYSTEM_INFO
-def get_system_info():
-    return SYSTEM_INFO
+# Expose configuration for settings management
 
 # Function to clear chat history (for web dashboard)
 def clear_all_chat_history():
@@ -1023,5 +1024,11 @@ def set_telegram_bot_token(token: str):
     global TELEGRAM_BOT_TOKEN
     TELEGRAM_BOT_TOKEN = token
     return _update_env_file({"TELEGRAM_BOT_TOKEN": token})
+
+def _escape_plaintext_markdown_v2(text: str) -> str:
+    """
+    Escapes plaintext for Telegram MarkdownV2.
+    """
+    return re.sub(r"([_\\*\"`\[\]\(\)\~\>\#\+\-\=\|\{\}\.\!])", r"\\\1", text)
 
 
