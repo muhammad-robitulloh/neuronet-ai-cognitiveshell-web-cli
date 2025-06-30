@@ -231,7 +231,7 @@ async def handle_text_message(update: Update, context: CallbackContext):
     response = await ai_core.process_user_message(chat_id, user_message)
     
     if response["type"] == "shell_command":
-        await kirim_ke_telegram(chat_id, context, f"*⚙️ SHELL* Translated shell command: `{response["command"]}`")
+        await kirim_ke_telegram(chat_id, context, f"*⚙️ SHELL* Translated shell command: `{response['command']}`")
         # Call run_shell_observer_telegram and handle return value for ConversationHandler
         return await run_shell_observer_telegram(response["command"], update, context)
     elif response["type"] == "program_generated":
