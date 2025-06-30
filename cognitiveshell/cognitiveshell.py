@@ -39,6 +39,24 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+async def error_handler(update: object, context: CallbackContext) -> None:
+    """
+    Log the error and send a message to the user if it's a Telegram API conflict.
+    """
+    logger.error(f"Exception while handling an update: {context.error}", exc_info=context.error)
+
+    if isinstance(context.error, telegram.error.Conflict):
+        error_message = (
+            "*🔴 ERROR: Telegram API Conflict*\n\n"\
+            "Sepertinya ada instance bot lain yang berjalan dengan token yang sama.\n"\
+            "Harap pastikan hanya satu instance bot yang berjalan pada satu waktu.\n\n"\
+            "Anda dapat mencoba menghentikan semua proses Python yang mungkin menjalankan bot dengan perintah:\n"\
+            "`killall python` (di Termux)\n\n"\
+            "Setelah itu, coba jalankan bot lagi."
+        )
+        if update and update.effective_chat:
+            await kirim_ke_telegram(update.effective_chat.id, context, error_message)
+
 # === Frontend Process Management ===
 
 def start_frontend_dev_server():
@@ -432,6 +450,9 @@ def main():
             application.add_handler(conv_handler)
             
             application.add_handler(MessageHandler(filters.COMMAND, handle_unknown_command))
+
+            # Add error handler
+            application.add_error_handler(error_handler)
 
             logger.info(f"Bot is running. Press Ctrl+C to stop.")
             application.run_polling(allowed_updates=Update.ALL_TYPES)
