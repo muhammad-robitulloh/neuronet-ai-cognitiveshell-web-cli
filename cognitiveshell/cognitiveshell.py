@@ -1,5 +1,6 @@
 import logging
 import sys
+import telegram
 import argparse
 import uvicorn
 import subprocess
