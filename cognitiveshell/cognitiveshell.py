@@ -235,13 +235,13 @@ async def handle_text_message(update: Update, context: CallbackContext):
         # Call run_shell_observer_telegram and handle return value for ConversationHandler
         return await run_shell_observer_telegram(response["command"], update, context)
     elif response["type"] == "program_generated":
-        await kirim_ke_telegram(chat_id, context, f"*✅ SUCCESS* *{response["language"].capitalize()}* code successfully generated and saved to `{response["filename"]}`.")
-        await kirim_ke_telegram(chat_id, context, f"*You can open it in Termux with:* `nano {response["filename"]}`")
+        await kirim_ke_telegram(chat_id, context, f"*✅ SUCCESS* *{response['language'].capitalize()}* code successfully generated and saved to `{response['filename']}`.")
+        await kirim_ke_telegram(chat_id, context, f"*You can open it in Termux with:* `nano {response['filename']}`")
         if response["run_suggestion"]:
-            await kirim_ke_telegram(chat_id, context, f"*And run with:* {response["run_suggestion"]}")
-        await kirim_ke_telegram(chat_id, context, f'*📋 GENERATED CODE*\n```{response["language"]}\n{response["code"]}\n```')
+            await kirim_ke_telegram(chat_id, context, f"*And run with:* {response['run_suggestion']}")
+        await kirim_ke_telegram(chat_id, context, f'*📋 GENERATED CODE*\n```{response['language']}\n{response['code']}\n```')
     elif response["type"] == "conversation":
-        await kirim_ke_telegram(chat_id, context, f"*💬 AI RESPONSE*\n{response["message"]}")
+        await kirim_ke_telegram(chat_id, context, f"*💬 AI RESPONSE*\n{response['message']}")
     elif response["type"] == "error":
         await kirim_ke_telegram(chat_id, context, f"*🔴 ERROR* {response["message"]}")
     elif response["type"] == "info":
