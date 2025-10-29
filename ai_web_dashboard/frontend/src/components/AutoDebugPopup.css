@@ -1,0 +1,96 @@
+.auto-debug-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.auto-debug-popup {
+  background-color: #2c2c2e; /* Dark background */
+  color: #f5f5f7; /* Light text */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 550px;
+  border: 1px solid #444;
+  text-align: center;
+}
+
+.auto-debug-popup h3 {
+  margin-top: 0;
+  color: #0a84ff; /* A bright blue for the title */
+  font-size: 1.4em;
+}
+
+.auto-debug-popup p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.error-details {
+  background-color: #1c1c1e; /* Even darker background for the code block */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #333;
+}
+
+.error-details strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #ff453a; /* A reddish color for "Error" */
+}
+
+.error-details pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #d1d1d6;
+  font-family: 'SF Mono', 'Menlo', 'Monaco', monospace;
+  font-size: 0.9em;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.popup-buttons button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.confirm-button {
+  background-color: #34c759; /* Green for confirm */
+  color: white;
+}
+
+.confirm-button:hover {
+  background-color: #30b551;
+  transform: translateY(-2px);
+}
+
+.cancel-button {
+  background-color: #ff3b30; /* Red for cancel */
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #e6352a;
+  transform: translateY(-2px);
+}

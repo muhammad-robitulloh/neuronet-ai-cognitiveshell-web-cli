@@ -1,0 +1,135 @@
+.thought-process {
+    background-color: #f0f0f0; /* Light background for thought process */
+    border-left: 4px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555; /* Darker text for contrast */
+}
+
+.thought-process pre {
+    background-color: #e0e0e0 !important; /* Even lighter for code blocks within thought */
+    padding: 8px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.thought-process code {
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.85em;
+}
+
+/* Ensure good contrast for text within thought process */
+.thought-process p, .thought-process li {
+    color: #333; /* Ensure text is dark on light background */
+}
+
+/* Markdown headings within thought process */
+.thought-process h1, .thought-process h2, .thought-process h3, .thought-process h4, .thought-process h5, .thought-process h6 {
+    color: #222; /* Darker headings */
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Links within thought process */
+.thought-process a {
+    color: #007bff; /* Standard link color */
+    text-decoration: underline;
+}
+
+/* Blockquotes within thought process */
+.thought-process blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 10px;
+    color: #777;
+}
+
+/* Tables within thought process */
+.thought-process table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+.thought-process th, .thought-process td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.thought-process th {
+    background-color: #eee;
+}
+
+/* Lists within thought process */
+.thought-process ul, .thought-process ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+.thought-process li {
+    margin-bottom: 0.5em;
+}
+
+/* Horizontal rule */
+.thought-process hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 1em 0;
+}
+
+/* Emphasis */
+.thought-process strong {
+    font-weight: bold;
+}
+
+.thought-process em {
+    font-style: italic;
+}
+
+/* Images */
+.thought-process img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
+}
+
+/* General spacing for markdown elements */
+.thought-process p {
+    margin-bottom: 1em;
+}
+
+.thought-process pre {
+    margin-bottom: 1em;
+}
+
+.thought-process ul, .thought-process ol {
+    margin-bottom: 1em;
+}
+
+.thought-process table {
+    margin-bottom: 1em;
+}
+
+.thought-process blockquote {
+    margin-bottom: 1em;
+}
+
+/* Specific adjustments for code blocks within the thought process */
+.thought-process pre code {
+    display: block; /* Ensures code block takes full width */
+    white-space: pre-wrap; /* Wraps long lines */
+    word-break: break-all; /* Breaks words if necessary */
+}
+
+/* Adjustments for inline code within thought process */
+.thought-process code:not(pre code) {
+    background-color: #e0e0e0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    color: #c7254e; /* A distinct color for inline code */
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "timestamp": 1751794318.5967624,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751794430.8785856,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751794486.4074886,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751794492.8506846,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 172,
+    "completion_tokens": 4,
+    "total_tokens": 176
+  },
+  {
+    "timestamp": 1751795444.5690608,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751795453.093425,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 187,
+    "completion_tokens": 4,
+    "total_tokens": 191
+  },
+  {
+    "timestamp": 1751796089.7289515,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751796100.8396277,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 184,
+    "completion_tokens": 4,
+    "total_tokens": 188
+  },
+  {
+    "timestamp": 1751796140.37944,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751796158.5055988,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 259,
+    "completion_tokens": 4,
+    "total_tokens": 263
+  },
+  {
+    "timestamp": 1751970063.5039244,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751970075.437961,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 149,
+    "completion_tokens": 4,
+    "total_tokens": 153
+  },
+  {
+    "timestamp": 1751970103.0876958,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751970647.3474686,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751970977.0131638,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751971151.5305207,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751984907.5982885,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751984963.1950822,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751987382.2104354,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751987455.065172,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751987461.2652829,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 156,
+    "completion_tokens": 4,
+    "total_tokens": 160
+  },
+  {
+    "timestamp": 1751988753.5866861,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  },
+  {
+    "timestamp": 1751988765.6786194,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 155,
+    "completion_tokens": 4,
+    "total_tokens": 159
+  },
+  {
+    "timestamp": 1751989851.7376573,
+    "model": "mistralai/mistral-small-3.2-24b-instruct",
+    "prompt_tokens": 53,
+    "completion_tokens": 4,
+    "total_tokens": 57
+  }
+]

@@ -1,7 +1,13 @@
 fastapi~=0.103.2
-pydantic<2
-uvicorn~=0.30.0
 python-telegram-bot~=21.0.1
-requests~=2.32.0
+requests
 python-dotenv~=1.0.1
 pexpect~=4.9.0
+ansi2html~=1.8.0
+uvicorn
+python-multipart
+websockets
+psutil
+asteval
+jsonpath-ng
+httpx

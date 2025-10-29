@@ -1,0 +1,64 @@
+.system-info-container {
+    padding: 20px;
+    background-color: #282c34;
+    color: #abb2bf;
+    border-radius: 8px;
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+.system-info-title {
+    color: #61afef;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.system-info-card {
+    background-color: #1e2127;
+    padding: 20px;
+    border-radius: 8px;
+    height: 100%; /* Ensure cards in a row have same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push content to top/bottom */
+}
+
+.system-info-card h6 {
+    color: #e5c07b;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.system-info-card p {
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) { /* md breakpoint */
+    .system-info-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) { /* sm breakpoint */
+    .system-info-container {
+        padding: 10px;
+    }
+
+    .system-info-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .system-info-card {
+        padding: 10px;
+    }
+
+    .system-info-card h6 {
+        font-size: 1.1rem;
+    }
+
+    .system-info-card p {
+        font-size: 0.9rem;
+    }
+}

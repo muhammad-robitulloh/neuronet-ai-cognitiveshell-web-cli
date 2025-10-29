@@ -1,0 +1,381 @@
+[
+    {
+        "role": "user",
+        "content": "halo",
+        "id": 1751794316487
+    },
+    {
+        "role": "ai",
+        "chunks": [],
+        "id": 1751794316487,
+        "isStreaming": true,
+        "isReasoningExpanded": false
+    },
+    {
+        "role": "user",
+        "content": "halo",
+        "id": 1751796137485
+    },
+    {
+        "role": "ai",
+        "chunks": [],
+        "id": 1751796137485,
+        "isStreaming": true,
+        "isReasoningExpanded": false
+    },
+    {
+        "role": "user",
+        "content": "halo",
+        "id": 1751970058856,
+        "chunks": [
+            {
+                "type": "intent_update",
+                "content": "Initial Intent: conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "reasoning_chunk",
+                "content": "## Thought Process\n- The user's message is a simple greeting, \"halo.\"\n- I interpreted this as an attempt to start a conversation, hence the detected intent 'conversation'.\n- There are no ambiguities or assumptions to make here.\n\n## Plan\n- I will respond with a friendly greeting to acknowledge the user's message and encourage further conversation.\n\n## Confidence\n- High: The response is straightforward and appropriate for the given input.",
+                "format": "markdown"
+            },
+            {
+                "type": "intent_update",
+                "content": "Final Intent (with reasoning): conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "message_chunk",
+                "content": "Halo! Ada yang bisa saya bantu hari ini?",
+                "format": "markdown"
+            }
+        ],
+        "isStreaming": false
+    },
+    {
+        "role": "ai",
+        "chunks": [],
+        "id": 1751970058856,
+        "isStreaming": false,
+        "isReasoningExpanded": false
+    },
+    {
+        "role": "user",
+        "content": "halo",
+        "id": 1751970100058,
+        "chunks": [
+            {
+                "type": "intent_update",
+                "content": "Initial Intent: conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "message_chunk",
+                "content": "Halo! Selamat datang kembali! \ud83d\ude0a Ada yang bisa saya bantu hari ini?",
+                "format": "markdown"
+            }
+        ],
+        "isStreaming": false,
+        "isReasoningExpanded": true
+    },
+    {
+        "role": "ai",
+        "chunks": [],
+        "id": 1751970100058,
+        "isStreaming": false,
+        "isReasoningExpanded": true
+    },
+    {
+        "role": "user",
+        "content": "halo",
+        "id": 1751970643445,
+        "chunks": [
+            {
+                "type": "intent_update",
+                "content": "Initial Intent: conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "message_chunk",
+                "content": "Halo! Apa yang bisa saya bantu hari ini?",
+                "format": "markdown"
+            }
+        ],
+        "isStreaming": false
+    },
+    {
+        "role": "ai",
+        "chunks": [],
+        "id": 1751970643445,
+        "isStreaming": false,
+        "isReasoningExpanded": false
+    },
+    {
+        "role": "user",
+        "content": "halo",
+        "id": 1751970973886,
+        "chunks": [
+            {
+                "type": "intent_update",
+                "content": "Initial Intent: conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "message_chunk",
+                "content": "Halo! Apa yang bisa saya bantu hari ini?",
+                "format": "markdown"
+            }
+        ],
+        "isStreaming": false
+    },
+    {
+        "role": "ai",
+        "chunks": [],
+        "id": 1751970973886,
+        "isStreaming": false,
+        "isReasoningExpanded": false
+    },
+    {
+        "role": "user",
+        "content": "halo",
+        "id": 1751971148282,
+        "chunks": [
+            {
+                "type": "intent_update",
+                "content": "Initial Intent: conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "message_chunk",
+                "content": "Halo! Ada yang bisa saya bantu di Termux?",
+                "format": "markdown"
+            }
+        ],
+        "isStreaming": false
+    },
+    {
+        "role": "ai",
+        "chunks": [],
+        "id": 1751971148282,
+        "isStreaming": false,
+        "isReasoningExpanded": false
+    },
+    {
+        "role": "user",
+        "content": "halo",
+        "id": 1751984902832,
+        "chunks": [
+            {
+                "type": "intent_update",
+                "content": "Initial Intent: conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "message_chunk",
+                "content": "Halo! Bagaimana saya bisa membantu Anda hari ini?",
+                "format": "markdown"
+            }
+        ],
+        "isStreaming": false
+    },
+    {
+        "role": "ai",
+        "chunks": [],
+        "id": 1751984902832,
+        "isStreaming": false,
+        "isReasoningExpanded": false
+    },
+    {
+        "role": "user",
+        "content": "halo",
+        "id": 1751987379634,
+        "chunks": [
+            {
+                "type": "intent_update",
+                "content": "Initial Intent: conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "message_chunk",
+                "content": "Halo! Ada yang bisa saya bantu hari ini?",
+                "format": "markdown"
+            }
+        ],
+        "isStreaming": false
+    },
+    {
+        "role": "ai",
+        "chunks": [],
+        "id": 1751987379634,
+        "isStreaming": false,
+        "isReasoningExpanded": false
+    },
+    {
+        "role": "user",
+        "content": "halo",
+        "id": 1751987452299
+    },
+    {
+        "role": "ai",
+        "chunks": [
+            {
+                "type": "intent_update",
+                "content": "Initial Intent: conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "reasoning_chunk",
+                "content": "## Thought Process\n- The user has greeted with a simple \"halo\" which appears to be a friendly start to a conversation.\n- I interpreted this as an intent to start a friendly chat or conversation.\n- No assumptions are made, and there is no ambiguity in the message.\n\n## Plan\n- I will respond to the greeting with a friendly and engaging message to continue the conversation.\n\n## Confidence\n- High. The user's intent is clear, and the plan is straightforward.",
+                "format": "markdown"
+            },
+            {
+                "type": "intent_update",
+                "content": "Final Intent (with reasoning): conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "message_chunk",
+                "content": "Halo! Apa yang bisa saya bantu hari ini?",
+                "format": "markdown"
+            }
+        ],
+        "id": 1751987452300,
+        "isStreaming": false,
+        "isReasoningExpanded": false
+    },
+    {
+        "role": "user",
+        "content": "halo",
+        "id": 1751988748007
+    },
+    {
+        "role": "ai",
+        "chunks": [
+            {
+                "type": "intent_update",
+                "content": "Initial Intent: conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "reasoning_chunk",
+                "content": "## Thought Process\n- The user's message is a simple greeting, \"halo\".\n- I interpreted this as a conversational opener, likely seeking a response in kind.\n- No assumptions or ambiguities are identified, as the intent is straightforward.\n\n## Plan\n- Respond with a friendly greeting to continue the conversation.\n- Ask an open-ended question to encourage further interaction.\n\n## Confidence\n- **High**: The response is straightforward and aligns with typical conversational etiquette.",
+                "format": "markdown"
+            },
+            {
+                "type": "intent_update",
+                "content": "Final Intent (with reasoning): conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "message_chunk",
+                "content": "Halo! Apa yang bisa saya bantu hari ini?",
+                "format": "markdown"
+            }
+        ],
+        "id": 1751988748008,
+        "isStreaming": false,
+        "isReasoningExpanded": false
+    },
+    {
+        "role": "user",
+        "content": "halo",
+        "id": 1751989848813
+    },
+    {
+        "role": "ai",
+        "chunks": [
+            {
+                "type": "intent_update",
+                "content": "Initial Intent: conversation",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": "",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": "",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": "H",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": "alo",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": "!",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": " A",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": "pa",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": " yang",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": " bisa",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": " saya",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": " b",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": "antu",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": " hari",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": " ini",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": "?",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": "",
+                "format": "markdown"
+            },
+            {
+                "type": "conversation_chunk",
+                "content": "",
+                "format": "markdown"
+            }
+        ],
+        "id": 1751989848814,
+        "isStreaming": false,
+        "isReasoningExpanded": false
+    }
+]

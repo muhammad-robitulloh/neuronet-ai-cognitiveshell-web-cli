@@ -1,0 +1,2 @@
+run = "cd ai_web_dashboard/frontend && npm install && npm run build && cd ../.. && python cognitiveshell/cognitiveshell.py --web"
+modules = ["python-3.8", "nodejs"]

@@ -21,3 +21,10 @@ __pycache__/
 # IDEs
 .vscode/
 .idea/
+
+# Custom ignores
+backups/
+tests/
+web_server.log
+ai_web_dashboard/frontend/src/components/Dashboard.js.bak
+cognitiveshell/cognitiveshell.py.bak

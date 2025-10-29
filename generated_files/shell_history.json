@@ -1,0 +1,1094 @@
+[
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n      hMMMMMMMMMMMMMMMMMMh\r\n"
+    },
+    {
+        "type": "output",
+        "content": "  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 22 hours, 14 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n"
+    },
+    {
+        "type": "output",
+        "content": ":MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 22 hours, 44 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mPackages\u001b[0m\u001b[0m:\u001b[0m 246 (dpkg), 1 (pkg)\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mShell\u001b[0m\u001b[0m:\u001b[0m zsh 5.9\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mCPU\u001b[0m\u001b[0m:\u001b[0m (8) @ 1.500GHz\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mMemory\u001b[0m\u001b[0m:\u001b[0m 2652MiB / 3746MiB\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[30m\u001b[40m   \u001b[31m\u001b[41m   \u001b[32m\u001b[42m   \u001b[33m\u001b[43m   \u001b[34m\u001b[44m   \u001b[35m\u001b[45m   \u001b[36m\u001b[46m   \u001b[37m\u001b[47m   \u001b[m\r\n\u001b[35C\u001b[38;5;8m\u001b[48;5;8m   \u001b[38;5;9m\u001b[48;5;9m   \u001b[38;5;10m\u001b[48;5;10m   \u001b[38;5;11m\u001b[48;5;11m   \u001b[38;5;12m\u001b[48;5;12m   \u001b[38;5;13m\u001b[48;5;13m   \u001b[38;5;14m\u001b[48;5;14m   \u001b[38;5;15m\u001b[48;5;15m   \u001b[m\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25h\u001b[?7h"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                  \r \r\u001b]2;u0_a277@localhost:~/neuronet-ai-cognitiveshell-web-cli\u0007\u001b]1;..shell-web-cli\u0007"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]7;file://localhost/data/data/com.termux/files/home/neuronet-ai-cognitiveshell-web-cli\u001b\\"
+    },
+    {
+        "type": "output",
+        "content": "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[40m\u001b[39m u0_a277@localhost \u001b[44m\u001b[30m\ue0b0\u001b[30m ~/neuronet-ai-cognitiveshell-web-cli \u001b[43m\u001b[34m\ue0b0\u001b[30m \ue0a0 main \u00b1 \u001b[49m\u001b[33m\ue0b0\u001b[39m \u001b[K"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?1h\u001b=\u001b[?2004h"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n"
+    },
+    {
+        "type": "output",
+        "content": "      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 1 day, 19 hours, 16 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mPackages\u001b[0m\u001b[0m:\u001b[0m 246 (dpkg), 1 (pkg)\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mShell\u001b[0m\u001b[0m:\u001b[0m zsh 5.9\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mCPU\u001b[0m\u001b[0m:\u001b[0m (8) @ 1.625GHz\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mMemory\u001b[0m\u001b[0m:\u001b[0m 2462MiB / 3746MiB\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\u001b[35C\u001b[30m\u001b[40m   \u001b[31m\u001b[41m   \u001b[32m\u001b[42m   \u001b[33m\u001b[43m   \u001b[34m\u001b[44m   \u001b[35m\u001b[45m   \u001b[36m\u001b[46m   \u001b[37m\u001b[47m   \u001b[m\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[38;5;8m\u001b[48;5;8m   \u001b[38;5;9m\u001b[48;5;9m   \u001b[38;5;10m\u001b[48;5;10m   \u001b[38;5;11m\u001b[48;5;11m   \u001b[38;5;12m\u001b[48;5;12m   \u001b[38;5;13m\u001b[48;5;13m   \u001b[38;5;14m\u001b[48;5;14m   \u001b[38;5;15m\u001b[48;5;15m   \u001b[m\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25h\u001b[?7h"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                  \r \r"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]2;u0_a277@localhost:~/neuronet-ai-cognitiveshell-web-cli\u0007\u001b]1;..shell-web-cli\u0007"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]7;file://localhost/data/data/com.termux/files/home/neuronet-ai-cognitiveshell-web-cli\u001b\\"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 1 day, 19 hours, 17 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mPackages\u001b[0m\u001b[0m:\u001b[0m 246 (dpkg), 1 (pkg)\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mShell\u001b[0m\u001b[0m:\u001b[0m zsh 5.9\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mCPU\u001b[0m\u001b[0m:\u001b[0m (8) @ 1.625GHz\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mMemory\u001b[0m\u001b[0m:\u001b[0m 2586MiB / 3746MiB\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\u001b[35C\u001b[30m\u001b[40m   \u001b[31m\u001b[41m   \u001b[32m\u001b[42m   \u001b[33m\u001b[43m   \u001b[34m\u001b[44m   \u001b[35m\u001b[45m   \u001b[36m\u001b[46m   \u001b[37m\u001b[47m   \u001b[m\r\n\u001b[35C\u001b[38;5;8m\u001b[48;5;8m   \u001b[38;5;9m\u001b[48;5;9m   \u001b[38;5;10m\u001b[48;5;10m   \u001b[38;5;11m\u001b[48;5;11m   \u001b[38;5;12m\u001b[48;5;12m   \u001b[38;5;13m\u001b[48;5;13m   \u001b[38;5;14m\u001b[48;5;14m   \u001b[38;5;15m\u001b[48;5;15m   \u001b[m\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25h\u001b[?7h"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                  \r \r\u001b]2;u0_a277@localhost:~/neuronet-ai-cognitiveshell-web-cli\u0007\u001b]1;..shell-web-cli\u0007"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]7;file://localhost/data/data/com.termux/files/home/neuronet-ai-cognitiveshell-web-cli\u001b\\"
+    },
+    {
+        "type": "output",
+        "content": "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[40m\u001b[39m u0_a277@localhost \u001b[44m\u001b[30m\ue0b0\u001b[30m ~/neuronet-ai-cognitiveshell-web-cli \u001b[43m\u001b[34m\ue0b0\u001b[30m \ue0a0 main \u00b1 \u001b[49m\u001b[33m\ue0b0\u001b[39m \u001b[K"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?1h\u001b=\u001b[?2004h"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n"
+    },
+    {
+        "type": "output",
+        "content": "          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 1 day, 19 hours, 26 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mPackages\u001b[0m\u001b[0m:\u001b[0m 246 (dpkg), 1 (pkg)\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mShell\u001b[0m\u001b[0m:\u001b[0m zsh 5.9\u001b[0m \r\n"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n"
+    },
+    {
+        "type": "output",
+        "content": "      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 1 day, 19 hours, 32 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mPackages\u001b[0m\u001b[0m:\u001b[0m 246 (dpkg), 1 (pkg)\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mShell\u001b[0m\u001b[0m:\u001b[0m zsh 5.9\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mCPU\u001b[0m\u001b[0m:\u001b[0m (8) @ 1.500GHz\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mMemory\u001b[0m\u001b[0m:\u001b[0m 2389MiB / 3746MiB\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\u001b[35C\u001b[30m\u001b[40m   \u001b[31m\u001b[41m   \u001b[32m\u001b[42m   \u001b[33m\u001b[43m   \u001b[34m\u001b[44m   \u001b[35m\u001b[45m   \u001b[36m\u001b[46m   \u001b[37m\u001b[47m   \u001b[m\r\n\u001b[35C\u001b[38;5;8m\u001b[48;5;8m   \u001b[38;5;9m\u001b[48;5;9m   \u001b[38;5;10m\u001b[48;5;10m   \u001b[38;5;11m\u001b[48;5;11m   \u001b[38;5;12m\u001b[48;5;12m   \u001b[38;5;13m\u001b[48;5;13m   \u001b[38;5;14m\u001b[48;5;14m   \u001b[38;5;15m\u001b[48;5;15m   \u001b[m\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\r\n\r\n\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25h\u001b[?7h"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                  \r \r"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]2;u0_a277@localhost:~/neuronet-ai-cognitiveshell-web-cli\u0007\u001b]1;..shell-web-cli\u0007"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]7;file://localhost/data/data/com.termux/files/home/neuronet-ai-cognitiveshell-web-cli\u001b\\"
+    },
+    {
+        "type": "output",
+        "content": "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[40m\u001b[39m u0_a277@localhost \u001b[44m\u001b[30m\ue0b0\u001b[30m ~/neuronet-ai-cognitiveshell-web-cli \u001b[43m\u001b[34m\ue0b0\u001b[30m \ue0a0 main \u00b1 \u001b[49m\u001b[33m\ue0b0\u001b[39m \u001b[K"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?1h\u001b=\u001b[?2004h"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-"
+    },
+    {
+        "type": "output",
+        "content": "\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 1 day, 22 hours, 55 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mPackages\u001b[0m\u001b[0m:\u001b[0m 246 (dpkg), 1 (pkg)\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mShell\u001b[0m\u001b[0m:\u001b[0m zsh 5.9\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mCPU\u001b[0m\u001b[0m:\u001b[0m (8) @ 1.800GHz\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mMemory\u001b[0m\u001b[0m:\u001b[0m 2594MiB / 3746MiB\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\u001b[35C\u001b[30m\u001b[40m   \u001b[31m\u001b[41m   \u001b[32m\u001b[42m   \u001b[33m\u001b[43m   \u001b[34m\u001b[44m   \u001b[35m\u001b[45m   \u001b[36m\u001b[46m   \u001b[37m\u001b[47m   \u001b[m\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[38;5;8m\u001b[48;5;8m   \u001b[38;5;9m\u001b[48;5;9m   \u001b[38;5;10m\u001b[48;5;10m   \u001b[38;5;11m\u001b[48;5;11m   \u001b[38;5;12m\u001b[48;5;12m   \u001b[38;5;13m\u001b[48;5;13m   \u001b[38;5;14m\u001b[48;5;14m   \u001b[38;5;15m\u001b[48;5;15m   \u001b[m\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25h\u001b[?7h"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]2;u0_a277@localhost:~/neuronet-ai-cognitiveshell-web-cli\u0007\u001b]1;..shell-web-cli\u0007"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]7;file://localhost/data/data/com.termux/files/home/neuronet-ai-cognitiveshell-web-cli\u001b\\"
+    },
+    {
+        "type": "output",
+        "content": "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[40m\u001b[39m u0_a277@localhost \u001b[44m\u001b[30m\ue0b0\u001b[30m ~/neuronet-ai-cognitiveshell-web-cli \u001b[43m\u001b[34m\ue0b0\u001b[30m \ue0a0 main \u00b1 \u001b[49m\u001b[33m\ue0b0\u001b[39m \u001b[K"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?1h\u001b=\u001b[?2004h"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n"
+    },
+    {
+        "type": "output",
+        "content": "      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m "
+    },
+    {
+        "type": "output",
+        "content": "\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 2 days, 5 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mPackages\u001b[0m\u001b[0m:\u001b[0m 246 (dpkg), 1 (pkg)\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mShell\u001b[0m\u001b[0m:\u001b[0m zsh 5.9\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mCPU\u001b[0m\u001b[0m:\u001b[0m (8) @ 1.800GHz\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mMemory\u001b[0m\u001b[0m:\u001b[0m 2571MiB / 3746MiB\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\u001b[35C\u001b[30m\u001b[40m   \u001b[31m\u001b[41m   \u001b[32m\u001b[42m   \u001b[33m\u001b[43m   \u001b[34m\u001b[44m   \u001b[35m\u001b[45m   \u001b[36m\u001b[46m   \u001b[37m\u001b[47m   \u001b[m\r\n\u001b[35C\u001b[38;5;8m\u001b[48;5;8m   \u001b[38;5;9m\u001b[48;5;9m   \u001b[38;5;10m\u001b[48;5;10m   \u001b[38;5;11m\u001b[48;5;11m   \u001b[38;5;12m\u001b[48;5;12m   \u001b[38;5;13m\u001b[48;5;13m   \u001b[38;5;14m\u001b[48;5;14m   \u001b[38;5;15m\u001b[48;5;15m   \u001b[m\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\r\n\r\n\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25h\u001b[?7h"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]2;u0_a277@localhost:~/neuronet-ai-cognitiveshell-web-cli\u0007\u001b]1;..shell-web-cli\u0007"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]7;file://localhost/data/data/com.termux/files/home/neuronet-ai-cognitiveshell-web-cli\u001b\\"
+    },
+    {
+        "type": "output",
+        "content": "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[40m\u001b[39m u0_a277@localhost \u001b[44m\u001b[30m\ue0b0\u001b[30m ~/neuronet-ai-cognitiveshell-web-cli \u001b[43m\u001b[34m\ue0b0\u001b[30m \ue0a0 main \u00b1 \u001b[49m\u001b[33m\ue0b0\u001b[39m \u001b[K\u001b[?1h\u001b=\u001b[?2004h"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 2 days, 6 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mPackages\u001b[0m\u001b[0m:\u001b[0m 246 (dpkg), 1 (pkg)\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mShell\u001b[0m\u001b[0m:\u001b[0m zsh 5.9\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mCPU\u001b[0m\u001b[0m:\u001b[0m (8) @ 1.450GHz\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mMemory\u001b[0m\u001b[0m:\u001b[0m 2494MiB / 3746MiB\u001b[0m "
+    },
+    {
+        "type": "output",
+        "content": "\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\u001b[35C\u001b[30m\u001b[40m   \u001b[31m\u001b[41m   \u001b[32m\u001b[42m   \u001b[33m\u001b[43m   \u001b[34m\u001b[44m   \u001b[35m\u001b[45m   \u001b[36m\u001b[46m   \u001b[37m\u001b[47m   \u001b[m\r\n\u001b[35C\u001b[38;5;8m\u001b[48;5;8m   \u001b[38;5;9m\u001b[48;5;9m   \u001b[38;5;10m\u001b[48;5;10m   \u001b[38;5;11m\u001b[48;5;11m   \u001b[38;5;12m\u001b[48;5;12m   \u001b[38;5;13m\u001b[48;5;13m   \u001b[38;5;14m\u001b[48;5;14m   \u001b[38;5;15m\u001b[48;5;15m   \u001b[m\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25h\u001b[?7h"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                  \r \r"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]2;u0_a277@localhost:~/neuronet-ai-cognitiveshell-web-cli\u0007\u001b]1;..shell-web-cli\u0007"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]7;file://localhost/data/data/com.termux/files/home/neuronet-ai-cognitiveshell-web-cli\u001b\\"
+    },
+    {
+        "type": "output",
+        "content": "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[40m\u001b[39m u0_a277@localhost \u001b[44m\u001b[30m\ue0b0\u001b[30m ~/neuronet-ai-cognitiveshell-web-cli \u001b[43m\u001b[34m\ue0b0\u001b[30m \ue0a0 main \u00b1 \u001b[49m\u001b[33m\ue0b0\u001b[39m \u001b[K"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?1h\u001b=\u001b[?2004h"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 2 days, 6 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mPackages\u001b[0m\u001b[0m:\u001b[0m 246 (dpkg), 1 (pkg)\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mShell\u001b[0m\u001b[0m:\u001b[0m zsh 5.9\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mCPU\u001b[0m\u001b[0m:\u001b[0m (8) @ 1.800GHz\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mMemory\u001b[0m\u001b[0m:\u001b[0m 2535MiB / 3746MiB\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\u001b[35C\u001b[30m\u001b[40m   \u001b[31m\u001b[41m   \u001b[32m\u001b[42m   \u001b[33m\u001b[43m   \u001b[34m\u001b[44m   \u001b[35m\u001b[45m   \u001b[36m\u001b[46m   \u001b[37m\u001b[47m   \u001b[m\r\n\u001b[35C\u001b[38;5;8m\u001b[48;5;8m   \u001b[38;5;9m\u001b[48;5;9m   \u001b[38;5;10m\u001b[48;5;10m   \u001b[38;5;11m\u001b[48;5;11m   \u001b[38;5;12m\u001b[48;5;12m   \u001b[38;5;13m\u001b[48;5;13m   \u001b[38;5;14m\u001b[48;5;14m   \u001b[38;5;15m\u001b[48;5;15m   \u001b[m\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\r\n\r\n\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25h\u001b[?7h"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                  \r \r"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]2;u0_a277@localhost:~/neuronet-ai-cognitiveshell-web-cli\u0007\u001b]1;..shell-web-cli\u0007"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]7;file://localhost/data/data/com.termux/files/home/neuronet-ai-cognitiveshell-web-cli\u001b\\"
+    },
+    {
+        "type": "output",
+        "content": "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[40m\u001b[39m u0_a277@localhost \u001b[44m\u001b[30m\ue0b0\u001b[30m ~/neuronet-ai-cognitiveshell-web-cli \u001b[43m\u001b[34m\ue0b0\u001b[30m \ue0a0 main \u00b1 \u001b[49m\u001b[33m\ue0b0\u001b[39m \u001b[K"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?1h\u001b=\u001b[?2004h"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n"
+    },
+    {
+        "type": "output",
+        "content": "          oNMm-  -mMNs\u001b[0m\r\n\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 2 days, 29 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mPackages\u001b[0m\u001b[0m:\u001b[0m 246 (dpkg), 1 (pkg)\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mShell\u001b[0m\u001b[0m:\u001b[0m zsh 5.9\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mCPU\u001b[0m\u001b[0m:\u001b[0m (8) @ 1.625GHz\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mMemory\u001b[0m\u001b[0m:\u001b[0m 2545MiB / 3746MiB\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\u001b[35C\u001b[30m\u001b[40m   \u001b[31m\u001b[41m   \u001b[32m\u001b[42m   \u001b[33m\u001b[43m   \u001b[34m\u001b[44m   \u001b[35m\u001b[45m   \u001b[36m\u001b[46m   \u001b[37m\u001b[47m   \u001b[m\r\n\u001b[35C\u001b[38;5;8m\u001b[48;5;8m   \u001b[38;5;9m\u001b[48;5;9m   \u001b[38;5;10m\u001b[48;5;10m   \u001b[38;5;11m\u001b[48;5;11m   \u001b[38;5;12m\u001b[48;5;12m   \u001b[38;5;13m\u001b[48;5;13m   \u001b[38;5;14m\u001b[48;5;14m   \u001b[38;5;15m\u001b[48;5;15m   \u001b[m\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\r\n\r\n\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25h\u001b[?7h"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                  \r \r"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]2;u0_a277@localhost:~/neuronet-ai-cognitiveshell-web-cli\u0007\u001b]1;..shell-web-cli\u0007"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]7;file://localhost/data/data/com.termux/files/home/neuronet-ai-cognitiveshell-web-cli\u001b\\"
+    },
+    {
+        "type": "output",
+        "content": "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[40m\u001b[39m u0_a277@localhost \u001b[44m\u001b[30m\ue0b0\u001b[30m ~/neuronet-ai-cognitiveshell-web-cli \u001b[43m\u001b[34m\ue0b0\u001b[30m \ue0a0 main \u00b1 \u001b[49m\u001b[33m\ue0b0\u001b[39m \u001b[K"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?1h\u001b=\u001b[?2004h"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 2 days, 46 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    },
+    {
+        "type": "info",
+        "content": "Welcome to the interactive terminal!"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25l\u001b[?7l"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[0m\u001b[32m\u001b[1m         -o          o-\r\n          +hydNNNNdyh+\r\n        +mMMMMMMMMMMMMm+\r\n      `dMM\u001b[37m\u001b[0m\u001b[1mm:\u001b[0m\u001b[32m\u001b[1mNMMMMMMN\u001b[37m\u001b[0m\u001b[1m:m\u001b[0m\u001b[32m\u001b[1mMMd`\r\n      hMMMMMMMMMMMMMMMMMMh\r\n  ..  yyyyyyyyyyyyyyyyyyyy  ..\r\n.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:\r\n-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-\r\n +yy+ MMMMMMMMMMMMMMMMMMMM +yy+\r\n      mMMMMMMMMMMMMMMMMMMm\r\n      `/++MMMMh++hMMMM++/`\r\n          MMMMo  oMMMM\r\n          MMMMo  oMMMM\r\n          oNMm-  -mMNs\u001b[0m\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[18A\u001b[9999999D"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[1m\u001b[32m\u001b[1mu0_a277\u001b[0m@\u001b[32m\u001b[1mlocalhost\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m-----------------\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mOS\u001b[0m\u001b[0m:\u001b[0m Android 13 aarch64\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mHost\u001b[0m\u001b[0m:\u001b[0m vivo V2310\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mKernel\u001b[0m\u001b[0m:\u001b[0m 5.10.198-android12-9-00090-gf7559871b50a-ab11383503\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mUptime\u001b[0m\u001b[0m:\u001b[0m 2 days, 47 mins\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mPackages\u001b[0m\u001b[0m:\u001b[0m 246 (dpkg), 1 (pkg)\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mShell\u001b[0m\u001b[0m:\u001b[0m zsh 5.9\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mCPU\u001b[0m\u001b[0m:\u001b[0m (8) @ 1.450GHz\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[35C\u001b[0m\u001b[32m\u001b[1mMemory\u001b[0m\u001b[0m:\u001b[0m 2526MiB / 3746MiB\u001b[0m \r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\u001b[35C\u001b[30m\u001b[40m   \u001b[31m\u001b[41m   \u001b[32m\u001b[42m   \u001b[33m\u001b[43m   \u001b[34m\u001b[44m   \u001b[35m\u001b[45m   \u001b[36m\u001b[46m   \u001b[37m\u001b[47m   \u001b[m\r\n\u001b[35C\u001b[38;5;8m\u001b[48;5;8m   \u001b[38;5;9m\u001b[48;5;9m   \u001b[38;5;10m\u001b[48;5;10m   \u001b[38;5;11m\u001b[48;5;11m   \u001b[38;5;12m\u001b[48;5;12m   \u001b[38;5;13m\u001b[48;5;13m   \u001b[38;5;14m\u001b[48;5;14m   \u001b[38;5;15m\u001b[48;5;15m   \u001b[m\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\r\n\r\n\r\n\r\n\r\n"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?25h\u001b[?7h"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]2;u0_a277@localhost:~/neuronet-ai-cognitiveshell-web-cli\u0007\u001b]1;..shell-web-cli\u0007"
+    },
+    {
+        "type": "output",
+        "content": "\u001b]7;file://localhost/data/data/com.termux/files/home/neuronet-ai-cognitiveshell-web-cli\u001b\\"
+    },
+    {
+        "type": "output",
+        "content": "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[40m\u001b[39m u0_a277@localhost \u001b[44m\u001b[30m\ue0b0\u001b[30m ~/neuronet-ai-cognitiveshell-web-cli \u001b[43m\u001b[34m\ue0b0\u001b[30m \ue0a0 main \u00b1 \u001b[49m\u001b[33m\ue0b0\u001b[39m \u001b[K"
+    },
+    {
+        "type": "output",
+        "content": "\u001b[?1h\u001b=\u001b[?2004h"
+    },
+    {
+        "type": "error",
+        "content": "Connection closed."
+    }
+]

@@ -1,0 +1,32 @@
+{
+    "OPENROUTER_API_KEY": "",
+    "LLM_BASE_URL": "https://openrouter.ai/api/v1/chat/completions",
+    "CODE_GEN_MODEL": "moonshotai/kimi-dev-72b:free",
+    "ERROR_FIX_MODEL": "nvidia/llama-3.3-nemotron-super-49b-v1:free",
+    "CONVERSATION_MODEL": "mistralai/mistral-small-3.2-24b-instruct",
+    "COMMAND_CONVERSION_MODEL": "nvidia/llama-3.3-nemotron-super-49b-v1:free",
+    "FILENAME_GEN_MODEL": "mistralai/mistral-small-3.2-24b-instruct",
+    "INTENT_DETECTION_MODEL": "mistralai/mistral-small-3.2-24b-instruct",
+    "WEB_EXTRACTION_MODEL": "mistralai/mistral-small-3.2-24b-instruct",
+    "REASONING_ENABLED": false,
+    "REASONING_MODEL": "mistralai/mistral-small-3.2-24b-instruct",
+    "REASONING_MAX_TOKENS": 200,
+    "REASONING_TEMPERATURE": 0.7,
+    "REASONING_APPLY_TO_MODELS": [
+        "CODE_GEN_MODEL",
+        "ERROR_FIX_MODEL",
+        "CONVERSATION_MODEL",
+        "COMMAND_CONVERSION_MODEL",
+        "FILENAME_GEN_MODEL",
+        "INTENT_DETECTION_MODEL"
+    ],
+    "TELEGRAM_ENABLED": false,
+    "TELEGRAM_BOT_TOKEN": "",
+    "TELEGRAM_CHAT_ID": "",
+    "DEFAULT_MAX_TOKENS": 1000,
+    "DEFAULT_TEMPERATURE": 0.7,
+    "WEB_SEARCH_ENABLED": false,
+    "GOOGLE_API_KEY": "",
+    "GOOGLE_CSE_ID": "",
+    "SERPER_API_KEY": ""
+}
